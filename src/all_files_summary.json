@@ -1,0 +1,23 @@
+{
+  "backend/main.mo": "Main actor defining Prediction type with outcome, predictedNumber, confidence, and timestamp fields; provides generatePrediction and getPredictionHistory functions using a Map-based storage with migration support.",
+  "backend/migration.mo": "Migration module that transforms OldPrediction records (without predictedNumber) to NewPrediction records by adding a default predictedNumber field set to 0.",
+  "feature_evidence.json": "Feature evidence report documenting two implemented features: displaying predicted numbers in PredictionDisplay component and adding predicted number column to PredictionHistory table.",
+  "frontend-file-summaries.txt": "JSON-formatted summaries of frontend files describing utility functions, React hooks for queries and timers, prediction display and history components with color-coded number rendering (green for odd, red for even).",
+  "frontend/index.css": "Tailwind CSS base styles defining CSS custom properties for light and dark themes using OKLCH color space with variables for background, foreground, card, chart colors, and other design tokens.",
+  "frontend/index.html": "HTML entry point with UTF-8 charset, viewport meta tag, title 'OK Win Predictor', and script loading main.tsx module.",
+  "frontend/src/App.tsx": "Root application component rendering Header, PredictionDisplay, PredictionHistory, and Footer within a full-screen layout with background pattern and blur overlay.",
+  "frontend/src/components/Footer.tsx": "Footer component displaying caffeine.ai attribution link with UTM parameters, animated heart icon, and copyright notice.",
+  "frontend/src/components/Header.tsx": "Sticky header with Gamepad2 icon, gradient-styled 'OK Win Predictor' title, and subtitle describing AI-powered game predictions.",
+  "frontend/src/components/PredictionDisplay.tsx": "Main prediction card showing period number, 30-second countdown timer, prominently displayed predicted number (0-9) with color coding, outcome, confidence progress bar, and manual/auto-generate functionality.",
+  "frontend/src/components/PredictionHistory.tsx": "Scrollable history card displaying past predictions in a list with predicted numbers in color-coded boxes (green for odd, red for even), outcomes, confidence bars, and trophy icons for high-confidence predictions.",
+  "frontend/src/hooks/useActor.ts": "React Query hook managing backend actor creation with Internet Identity authentication, automatic query invalidation on identity changes, and anonymous actor fallback.",
+  "frontend/src/hooks/useCountdownTimer.ts": "Custom React hook implementing a countdown timer that decrements every second, triggers a callback on completion, and automatically resets to initial value.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides React context and hooks for Internet Identity authentication on ICP, managing login state, identity persistence, and AuthClient lifecycle with configurable options.",
+  "frontend/src/hooks/usePeriodNumber.ts": "Custom React hook that manages a period number counter with localStorage persistence, providing increment functionality for tracking prediction periods.",
+  "frontend/src/hooks/useQueries.ts": "Defines React Query hooks for generating predictions (with random number 0-9) and fetching prediction history from the backend actor, with automatic cache invalidation.",
+  "frontend/src/index.css": "Tailwind CSS configuration with custom CSS variables for light/dark theme colors using OKLCH color space, including design tokens for UI components, charts, and sidebar.",
+  "frontend/src/lib/utils.ts": "Utility functions for className merging, timestamp formatting, outcome/confidence color coding, and number color assignment (odd=green, even=red).",
+  "frontend/src/main.tsx": "Application entry point that sets up React root with QueryClient and InternetIdentityProvider wrappers around the main App component.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending default theme with custom OKLCH colors, container settings, border radius variables, glow shadows, and accordion animations.",
+  "project_state.json": "Project metadata tracking implemented features (prediction display, history, timer, period tracking) and pending feature requests for OK Win game prediction application."
+}

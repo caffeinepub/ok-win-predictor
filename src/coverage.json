@@ -1,0 +1,68 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-19T19:26:19.201Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 3,
+    "implemented": 2,
+    "items": [
+      {
+        "id": "REQ-10",
+        "summary": "Modify the backend Prediction type to include a predicted number field (0-9) in addition to the existing outcome field",
+        "status": "unknown",
+        "plannedFiles": [],
+        "matchedFiles": []
+      },
+      {
+        "id": "REQ-11",
+        "summary": "Display the predicted number prominently in the PredictionDisplay component alongside the current Big/Small outcome prediction",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/PredictionDisplay.tsx",
+          "frontend/src/hooks/useQueries.ts"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/PredictionDisplay.tsx",
+          "frontend/src/hooks/useQueries.ts"
+        ]
+      },
+      {
+        "id": "REQ-12",
+        "summary": "Add the predicted number column to the PredictionHistory component's table view, showing the number for each past prediction",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/PredictionHistory.tsx",
+          "frontend/src/lib/utils.ts"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/PredictionHistory.tsx",
+          "frontend/src/lib/utils.ts"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "backend/main.mo",
+    "backend/migration.mo",
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/backend.d.ts",
+    "frontend/src/backend.ts",
+    "frontend/src/components/PredictionDisplay.tsx",
+    "frontend/src/components/PredictionHistory.tsx",
+    "frontend/src/declarations/backend.did.d.ts",
+    "frontend/src/declarations/backend.did.js",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/lib/utils.ts",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

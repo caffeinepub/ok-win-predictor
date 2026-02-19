@@ -1,0 +1,81 @@
+{
+  "kind": "build_request",
+  "title": "Add predicted number display to prediction interface",
+  "projectName": "OK Win Predictor",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-10",
+      "text": "Modify the backend Prediction type to include a predicted number field (0-9) in addition to the existing outcome field",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "please predict the number"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Prediction type includes a number field storing values 0-9",
+        "generatePrediction function returns a random number between 0 and 9 for each prediction",
+        "Number prediction is stored alongside outcome and confidence in prediction history"
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "text": "Display the predicted number prominently in the PredictionDisplay component alongside the current Big/Small outcome prediction",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "please predict the number"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Predicted number (0-9) is displayed in large, prominent typography in the PredictionDisplay card",
+        "Number is visually distinct from the Big/Small outcome indicator",
+        "Number updates automatically when new predictions are generated",
+        "Number is styled consistently with the existing vibrant color theme"
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Add the predicted number column to the PredictionHistory component's table view, showing the number for each past prediction",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "please predict the number"
+        ]
+      },
+      "acceptanceCriteria": [
+        "History table includes a Number column displaying the predicted number for each entry",
+        "Number is displayed between the Period and Outcome columns for logical flow",
+        "Numbers are color-coded to match the color scheme seen in the reference image (green for odd, red for even, or similar pattern)",
+        "Historical numbers are sortable and clearly visible in the scrollable history view"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify the 30-second countdown timer mechanism",
+    "Maintain the existing automatic prediction generation on timer completion",
+    "Preserve the current period number tracking functionality",
+    "Keep the existing confidence meter and Big/Small outcome logic"
+  ],
+  "nonGoals": [
+    "Implementing multiplier buttons (X1, X5, X10, etc.) shown in the reference image",
+    "Adding chart or follow strategy tabs",
+    "Implementing color indicator dots for predictions",
+    "Adding game history period ID format (202602191000052317 style)",
+    "Modifying the backend architecture or data persistence mechanism"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

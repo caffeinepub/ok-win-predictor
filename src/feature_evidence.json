@@ -1,0 +1,43 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-display-the-predicted-number-prominently-in-the-predictiondisplay-component-alongside-the-current-big-small-outcome-prediction",
+      "featureTitle": "Display the predicted number prominently in the PredictionDisplay component alongside the current Big/Small outcome prediction",
+      "files": [
+        "frontend/src/components/PredictionDisplay.tsx",
+        "frontend/src/hooks/useQueries.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-the-predicted-number-column-to-the-predictionhistory-component-s-table-view-showing-the-number-for-each-past-prediction",
+      "featureTitle": "Add the predicted number column to the PredictionHistory component's table view, showing the number for each past prediction",
+      "files": [
+        "frontend/src/components/PredictionHistory.tsx",
+        "frontend/src/lib/utils.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-12"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

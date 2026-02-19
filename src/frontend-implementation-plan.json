@@ -1,0 +1,51 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Add predicted number display to prediction interface",
+  "requirements": [
+    {
+      "id": "REQ-11",
+      "summary": "Display the predicted number prominently in the PredictionDisplay component alongside the current Big/Small outcome prediction",
+      "acceptanceCriteria": [
+        "Predicted number (0-9) is displayed in large, prominent typography in the PredictionDisplay card",
+        "Number is visually distinct from the Big/Small outcome indicator",
+        "Number updates automatically when new predictions are generated",
+        "Number is styled consistently with the existing vibrant color theme"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/PredictionDisplay.tsx",
+          "operation": "modify",
+          "description": "Add predicted number display above or adjacent to the Big/Small outcome indicator. Display the predictedNumber field from the Prediction type in large, prominent typography using text-6xl or text-7xl classes. Apply vibrant color styling consistent with the existing theme (using gradient or accent colors from the design system). Ensure the number is visually distinct from the outcome badge by using different typography sizing and spacing. The number should automatically update when currentPrediction state changes."
+        },
+        {
+          "path": "frontend/src/hooks/useQueries.ts",
+          "operation": "modify",
+          "description": "Update the useGeneratePredictionMutation hook to pass the predictedNumber parameter (random number 0-9) to the generatePrediction backend function. Modify the mutation function to generate a random integer between 0 and 9 on the frontend before calling the backend. Ensure the returned Prediction object includes the predictedNumber field for display in components."
+        }
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "summary": "Add the predicted number column to the PredictionHistory component's table view, showing the number for each past prediction",
+      "acceptanceCriteria": [
+        "History table includes a Number column displaying the predicted number for each entry",
+        "Number is displayed between the Period and Outcome columns for logical flow",
+        "Numbers are color-coded to match the color scheme seen in the reference image (green for odd, red for even, or similar pattern)",
+        "Historical numbers are sortable and clearly visible in the scrollable history view"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/PredictionHistory.tsx",
+          "operation": "modify",
+          "description": "Add a Number column header between Period and Outcome columns in the history table structure. For each prediction entry in the history, display the predictedNumber field in the new column using prominent typography (text-2xl or text-3xl). Apply color-coding to the numbers based on odd/even pattern: green text for odd numbers (1, 3, 5, 7, 9) and red text for even numbers (0, 2, 4, 6, 8), matching the visual style in the reference screenshot. Ensure proper spacing and alignment with existing columns."
+        },
+        {
+          "path": "frontend/src/lib/utils.ts",
+          "operation": "modify",
+          "description": "Add a utility function getNumberColor that takes a predicted number (0-9) and returns the appropriate color class based on odd/even logic. Return green-themed classes (text-green-500 or similar) for odd numbers and red-themed classes (text-red-500 or similar) for even numbers. This utility will be imported and used in PredictionHistory for consistent number color-coding."
+        }
+      ]
+    }
+  ]
+}

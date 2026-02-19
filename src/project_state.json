@@ -1,0 +1,129 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 7,
+  "summary": "OK Win game prediction code",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-build-a-frontend-interface-displaying-the-current-game-prediction-with-outcome-confidence-meter-and-timestamp",
+      "title": "Build a frontend interface displaying the current game prediction with outcome, confidence meter, and timestamp",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-button-to-generate-new-predictions-on-demand-fetching-fresh-prediction-data-from-the-backend",
+      "title": "Add a button to generate new predictions on demand, fetching fresh prediction data from the backend",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-prediction-history-view-showing-past-predictions-in-a-list-or-table-format-with-dates-outcomes-and-confidence-levels",
+      "title": "Create a prediction history view showing past predictions in a list or table format with dates, outcomes, and confidence levels",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-cohesive-visual-design-theme-with-vibrant-colors-and-modern-card-based-layout-suitable-for-a-gaming-prediction-application-ensuring-consistent-typography-and-spacing-throughout",
+      "title": "Apply a cohesive visual design theme with vibrant colors and modern card-based layout suitable for a gaming prediction application, ensuring consistent typography and spacing throughout",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-30-second-countdown-timer-to-the-predictiondisplay-component-that-displays-the-remaining-time-until-the-next-prediction-period",
+      "title": "Add a 30-second countdown timer to the PredictionDisplay component that displays the remaining time until the next prediction period",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-automatically-generate-a-new-prediction-when-the-30-second-countdown-timer-reaches-zero-triggering-the-existing-generateprediction-mutation",
+      "title": "Automatically generate a new prediction when the 30-second countdown timer reaches zero, triggering the existing generatePrediction mutation",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-the-current-period-number-in-the-predictiondisplay-component-incrementing-with-each-30-second-cycle",
+      "title": "Display the current period number in the PredictionDisplay component, incrementing with each 30-second cycle",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-the-predicted-number-prominently-in-the-predictiondisplay-component-alongside-the-current-big-small-outcome-prediction",
+      "title": "Display the predicted number prominently in the PredictionDisplay component alongside the current Big/Small outcome prediction",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-predicted-number-column-to-the-predictionhistory-component-s-table-view-showing-the-number-for-each-past-prediction",
+      "title": "Add the predicted number column to the PredictionHistory component's table view, showing the number for each past prediction",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create OK Win game prediction code",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Create a backend function that generates game predictions for OK Win, returning prediction data including predicted outcome, confidence level, and timestamp",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Create a backend function to store prediction history, allowing users to save and retrieve past predictions with their results",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Add 30-second automatic prediction period with countdown timer that generates new predictions when each period ends",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Display the predicted number (not just big/small) for each period in the prediction display",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Modify the backend Prediction type to include a predicted number field (0-9) in addition to the existing outcome field",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "status": "pending"
+    }
+  ],
+  "projectName": "OK Win Predictor",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
